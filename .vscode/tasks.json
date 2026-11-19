@@ -1,0 +1,50 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compilar Sistema (g++)",
+            "type": "shell",
+            "command": "mkdir -p build && g++ -std=c++17 -O2 -Wall -Wextra -Iinclude src/main.cpp src/cadastros.cpp src/consultas.cpp src/ordenacao.cpp src/recursao.cpp src/simulacao.cpp -o build/sistema",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Compilar e Executar Sistema",
+            "type": "shell",
+            "command": "mkdir -p build && g++ -std=c++17 -O2 -Wall -Wextra -Iinclude src/main.cpp src/cadastros.cpp src/consultas.cpp src/ordenacao.cpp src/recursao.cpp src/simulacao.cpp -o build/sistema && ./build/sistema",
+            "group": "build",
+            "problemMatcher": ["$gcc"],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "Compilar e Rodar Testes",
+            "type": "shell",
+            "command": "mkdir -p build && g++ -std=c++17 -O2 -Wall -Wextra -Iinclude tests/testes_automatizados.cpp src/cadastros.cpp src/consultas.cpp src/ordenacao.cpp src/recursao.cpp src/simulacao.cpp -o build/testes && ./build/testes",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "Limpar build",
+            "type": "shell",
+            "command": "rm -rf build/*",
+            "problemMatcher": []
+        }
+    ]
+}
