@@ -1,6 +1,6 @@
-# Sistema de Investigacao Criminal - APC II
+# Sistema de Investigacao Criminal
 
-Projeto em C++ desenvolvido para a disciplina de **Algoritmos e Programacao de Computadores II** (Prof. Me. Joao Duda).
+Projeto em C++ desenvolvido para a disciplina de **Algoritmos e Programacao de Computadores II** (Prof. Me. João Victor Duda do Amaral).
 
 ## Estrutura do Projeto
 
